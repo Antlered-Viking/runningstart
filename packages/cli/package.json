@@ -1,0 +1,47 @@
+{
+  "name": "@runningstart/cli",
+  "version": "0.0.0",
+  "sideEffects": false,
+  "description": "The CLI module for calling the Running Start tool",
+  "keywords": [
+    "cli",
+    "generator",
+    "typescript"
+  ],
+  "author": {
+    "name": "Codemaster Mick",
+    "email": "51538065+codemastermick@users.noreply.github.com"
+  },
+  "license": "ISC",
+  "main": "dist/cli.js",
+  "directories": {
+    "dist": "dist",
+    "test": "__tests__"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Antlered-Viking/runningstart.git"
+  },
+  "scripts": {
+    "clean": "npm run clean:build && npm run clean:coverage",
+    "clean:build": "rimraf dist",
+    "build": "tsc",
+    "test": "echo \"Error: no tests defined yet\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/Antlered-Viking/runningstart/issues"
+  },
+  "homepage": "https://github.com/Antlered-Viking/runningstart#readme",
+  "dependencies": {
+    "inquirer": "^8.2.0"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^8.2.0"
+  }
+}
