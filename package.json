@@ -2,9 +2,13 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "dev": "ts-node-dev ./packages/cli/src/cli.ts",
-    "build": "lerna run build --stream",
-    "test": "lerna run test --stream"
+    "clean": "lerna run clean --stream",
+    "clean:build": "lerna run clean:build --stream",
+    "clean:coverage": "rimraf coverage",
+    "dev": "cross-env NODE_ENV=development ts-node-dev ./packages/cli/src/cli.ts",
+    "build": "cross-env NODE_ENV=production lerna run build --stream",
+    "test": "cross-env NODE_ENV=development mocha -r ts-node/register '**/__tests__/*.spec.ts'",
+    "test:coverage": "cross-env NODE_ENV=development c8 -c ./.c8rc mocha -r ts-node/register '**/__tests__/*.spec.ts'"
   },
   "devDependencies": {
     "@istanbuljs/nyc-config-typescript": "^1.0.2",
