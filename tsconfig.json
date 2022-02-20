@@ -1,6 +1,5 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
         "declaration": true,
         "noImplicitAny": false,
         "removeComments": true,
@@ -8,13 +7,16 @@
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
         "target": "es6",
+        "allowJs": true,
         "sourceMap": true,
         "lib": [
-            "es6"
-        ]
+            "ES5",
+            "ES6"
+        ],
+        "allowSyntheticDefaultImports": true
     },
     "exclude": [
         "node_modules",
-        "**/*.spec.ts"
+        "**/__tests__/*.spec.ts"
     ]
 }
