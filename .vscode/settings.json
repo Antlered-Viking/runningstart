@@ -1,0 +1,22 @@
+{
+    "json.schemas": [
+        {
+            "fileMatch": [
+                ".mocharc.json"
+            ],
+            "url": "https://json.schemastore.org/mocharc.json"
+        },
+        {
+            "fileMatch": [
+                "lerna.json"
+            ],
+            "url": "https://json.schemastore.org/lerna.json"
+        },
+        {
+            "fileMatch": [
+                "tsconfig.json"
+            ],
+            "url": "https://json.schemastore.org/tsconfig.json"
+        }
+    ]
+}
