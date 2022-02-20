@@ -4,7 +4,6 @@
   "scripts": {
     "bootstrap": "lerna run bootstrap",
     "clean": "lerna run clean --stream",
-    "clean:build": "lerna run clean:build --stream",
     "clean:coverage": "rimraf coverage",
     "dev": "cross-env NODE_ENV=development ts-node-dev ./packages/cli/src/cli.ts",
     "build": "cross-env NODE_ENV=production lerna run build --stream",
