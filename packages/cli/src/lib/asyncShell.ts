@@ -1,14 +1,17 @@
 import { exec } from "child_process";
 
 async function asyncShell(cmd: string): Promise<any> {
-  await exec(cmd, (error, stdout, stderr) => {
-    if (error) {
-      return console.error(error.message);
-    }
-    if (stderr) {
-      return console.error(stderr);
-    }
-    return stdout;
+  await new Promise<void>((resolve, reject) => {
+    exec(cmd, (error, stdout, stderr) => {
+      console.info(stdout);
+      if (error !== null) {
+        return reject(error);
+      }
+      if (stderr) {
+        return console.error(stderr);
+      }
+      resolve();
+    });
   });
 }
 

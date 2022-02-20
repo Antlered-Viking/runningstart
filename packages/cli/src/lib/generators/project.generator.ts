@@ -19,26 +19,13 @@ const createDir = (dirName: string) => {
 };
 
 const initGit = async () => {
-  const { stdout, stderr } = await asyncShell("git init");
-  if (stderr) {
-    console.error(stderr);
-    return;
-  } else {
-    console.info(stdout);
-  }
+  await asyncShell("git init");
 };
 
 const initLerna = async (useIndependentVersions: boolean = true) => {
-  const { stdout, stderr } = await asyncShell(
+  await asyncShell(
     useIndependentVersions ? "lerna init --independent" : "lerna init"
   );
-  if (stderr) {
-    console.error(stderr);
-    return;
-  } else {
-    console.info(stdout);
-    return;
-  }
 };
 
 const generateProject = async (
