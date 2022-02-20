@@ -29,7 +29,7 @@
     "url": "git+https://github.com/Antlered-Viking/runningstart.git"
   },
   "scripts": {
-    "clean": "npm run clean:build && npm run clean:coverage",
+    "clean": "npm run clean:build",
     "clean:build": "rimraf dist",
     "build": "tsc",
     "test": "echo \"Error: no tests defined yet\" && exit 1"
@@ -39,9 +39,11 @@
   },
   "homepage": "https://github.com/Antlered-Viking/runningstart#readme",
   "dependencies": {
+    "chalk": "^5.0.0",
     "inquirer": "^8.2.0"
   },
   "devDependencies": {
+    "@types/chalk": "^2.2.0",
     "@types/inquirer": "^8.2.0"
   }
 }

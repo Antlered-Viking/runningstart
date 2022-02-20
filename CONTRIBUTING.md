@@ -1,4 +1,4 @@
-## Getting Ready for Development
+# Getting Ready for Development
 
 ## Verdaccio
 

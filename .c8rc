@@ -6,7 +6,8 @@
     "src/*"
   ],
   "reporter": [
-    "lcov"
+    "lcov",
+    "clover"
   ],
   "clean": true
 }
